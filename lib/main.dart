@@ -4,6 +4,7 @@ import 'package:expenses/components/graph.dart';
 import 'package:expenses/components/transaction_form.dart';
 import 'package:expenses/components/transaction_list.dart';
 import 'package:expenses/models/transaction.dart';
+import 'package:expenses/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(App());
@@ -15,25 +16,26 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: ExpensesApp(),
-      theme: ThemeData(
-        useMaterial3: true,
-        fontFamily: "Quicksand",
-        appBarTheme: AppBarTheme(
-          backgroundColor: Colors.teal,
-          foregroundColor: Colors.red,
-          titleTextStyle: TextStyle(
-            fontFamily: "Quicksand",
-            fontSize: 25,
-            fontWeight: FontWeight(700),
-            color: Theme.of(context).primaryColor,
-          ),
-        ),
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.red,
-          primary: Colors.teal,
-          secondary: Colors.red,
-        ),
-      ),
+      theme: AppTheme.light(),
+      // theme: ThemeData(
+      //   useMaterial3: true,
+      //   fontFamily: "Quicksand",
+      //   appBarTheme: AppBarTheme(
+      //     backgroundColor: Colors.teal,
+      //     foregroundColor: Colors.red,
+      //     titleTextStyle: TextStyle(
+      //       fontFamily: "Quicksand",
+      //       fontSize: 25,
+      //       fontWeight: FontWeight(700),
+      //       color: Theme.of(context).primaryColor,
+      //     ),
+      //   ),
+      //   colorScheme: ColorScheme.fromSeed(
+      //     seedColor: Colors.red,
+      //     primary: Colors.teal,
+      //     secondary: Colors.red,
+      //   ),
+      // ),
     );
   }
 }
